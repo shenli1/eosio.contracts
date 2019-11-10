@@ -420,7 +420,7 @@ namespace eosiosystem {
    void system_contract::check_voting_requirement( const name& owner, const char* error_msg )const
    {
       auto vitr = _voters.find( owner.value );
-      check( vitr != _voters.end() && ( vitr->proxy || 21 <= vitr->producers.size() ), error_msg );
+      check( vitr != _voters.end() && ( vitr->proxy || 36 <= vitr->producers.size() ), error_msg );
    }
 
    /**
